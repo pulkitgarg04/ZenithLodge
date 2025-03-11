@@ -147,8 +147,8 @@ export const updateLodge = asyncHandler(async (req, res, next) => {
   }
 
   lodge = await Lodge.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true,
+    // new: true,
+    // runValidators: true,
   });
 
   res.status(200).json({
@@ -181,7 +181,7 @@ export const deleteLodge = asyncHandler(async (req, res, next) => {
     );
   }
 
-  await lodge.remove();
+  await lodge.deleteOne();
 
   res.status(200).json({
     success: true,

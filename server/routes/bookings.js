@@ -13,4 +13,3 @@ router.route("/:id").get(getBooking).put(updateBooking)
 router.route("/:id/cancel").put(cancelBooking)
 
 export default router
-
