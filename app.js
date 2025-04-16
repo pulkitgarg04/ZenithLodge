@@ -2,7 +2,6 @@ if(process.env.NODE_ENV != "production") {
     require("dotenv").config();
 }
 
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -65,13 +64,6 @@ store.on("error", () =>{
         httpOnly: true,
      },
  };
-
-//  app.get("/", (req , res) => {
-//     // res.send("Hi, I am root");
-//     res.redirect("/login");
-// });
-
-
 
 app.use(session(sessionOptions));
 app.use(flash());
