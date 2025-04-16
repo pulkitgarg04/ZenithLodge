@@ -10,7 +10,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-      folder: 'wanderlust_DEV',
+      folder: 'zenithlodge',
       allowerdFormats: ["png","jpg","jpeg"],
     },
   });
